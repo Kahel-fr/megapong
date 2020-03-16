@@ -2,7 +2,7 @@
 #include "main_menu.h";
 
 void draw_main_menu() {
-	if (JOY_readJoypad(JOY_1) == BUTTON_DOWN && main_menu_button_was_pressed == 0) {
+	/*if (JOY_readJoypad(JOY_1) == BUTTON_DOWN && main_menu_button_was_pressed == 0) {
 		if (main_menu_selection < 2)
 			main_menu_selection += 1;
 		else
@@ -15,5 +15,11 @@ void draw_main_menu() {
 	VDP_drawText("X", 9, main_menu_cursor_positions[main_menu_selection]);
 	VDP_drawText("Play", 10, 12);
 	VDP_drawText("Options", 10, 14);
-	VDP_drawText("Options", 10, 16);
+	VDP_drawText("Options", 10, 16);*/
+	for (int i = 0; i < sizeof(main_menu_lines);i++) {
+		int y = main_menu_top_position + i;
+		/*if (i % 2 == 0)
+			y += 1;*/
+		VDP_drawText(main_menu_lines[i], 10, y);
+	}
 }
