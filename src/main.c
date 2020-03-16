@@ -1,12 +1,13 @@
 #include <genesis.h>
+#include "main_menu.h"
+#include "inputs.h"
 
 int main()
 {
-	VDP_drawText("Hello Genny World!", 10, 13);
-
 	while (1)
 	{
-		//read input
+		draw_main_menu();
+		read_inputs();
 		//move sprite
 		//update score
 		//draw current screen (logo, start screen, settings, game, gameover, credits...)
@@ -15,4 +16,8 @@ int main()
 		VDP_waitVSync();
 	}
 	return (0);
+}
+
+void read_inputs() {
+
 }
