@@ -1,13 +1,12 @@
 #include <genesis.h>
 #include "main_menu.h"
-#include "inputs.h"
 
 int main()
 {
+	init_main_menu();
 	while (1)
 	{
 		draw_main_menu();
-		read_inputs();
 		//move sprite
 		//update score
 		//draw current screen (logo, start screen, settings, game, gameover, credits...)
@@ -16,8 +15,4 @@ int main()
 		VDP_waitVSync();
 	}
 	return (0);
-}
-
-void read_inputs() {
-
 }
