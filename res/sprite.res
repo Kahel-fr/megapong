@@ -1,0 +1,1 @@
+SPRITE  imgball    "sprites/ball.png"  1   1   NONE
