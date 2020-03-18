@@ -1,5 +1,6 @@
 #ifndef __MAIN_MENU_H__
 #define __MAIN_MENU_H__
+#include "game.h"
 
 extern char* main_menu_lines[3];
 int main_menu_top_position;

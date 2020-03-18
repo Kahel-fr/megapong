@@ -1,8 +1,4 @@
-#include <genesis.h>
-#include <kdebug.h>
-#include "main_menu.h"
 #include "game.h"
-#include "input.h"
 
 void main_menu_init() {
 	main_menu_top_position = 12;

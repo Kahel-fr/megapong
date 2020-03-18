@@ -1,9 +1,4 @@
-#include <genesis.h>
 #include "game.h"
-#include "input.h"
-#include "main_menu.h"
-#include "game_screen.h"
-#include "tile.h"
 
 void loadRessources();
 void init_screen();
@@ -12,6 +7,7 @@ void draw_screen();
 int main()
 {
 	//loadRessources();
+	SPR_init(0,0,0);
 	change_screen(SCREEN_MAIN);
 	while (1)
 	{
@@ -21,7 +17,7 @@ int main()
 		//draw current screen (logo, start screen, settings, game, gameover, credits...)
 
 		//wait for screen refresh
-		update_inputs();
+		//update_inputs();
 		VDP_waitVSync();
 	}
 	return (0);

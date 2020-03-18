@@ -1,5 +1,6 @@
-#ifndef _INPUT_H_
-#define _INPUT_H_
+#ifndef __INPUT_H__
+#define __INPUT_H__
+#include "game.h"
 
 #define MAX_INPUT 15
 

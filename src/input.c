@@ -1,6 +1,4 @@
-#include <genesis.h>
-#include <kdebug.h>
-#include "input.h"
+#include "game.h"
 
 void update_inputs(){
     lastPressed = JOY_readJoypad(JOY_1);
