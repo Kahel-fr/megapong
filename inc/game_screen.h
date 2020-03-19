@@ -5,4 +5,6 @@
 void game_screen_init();
 void game_screen_draw();
 
+int score;
+
 #endif
