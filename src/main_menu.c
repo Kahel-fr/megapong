@@ -4,10 +4,9 @@ void main_menu_init() {
 	main_menu_top_position = 12;
 	main_menu_selection = 0;
 	main_menu_button_was_pressed = 0;
-	char* main_menu_lines[3] = {
+	char* main_menu_lines[2] = {
 		"Play",
-		"Options",
-		"Menu"
+		"Credits"
 	};
 
 	VDP_drawText("Megapong", 8, 8);
@@ -38,8 +37,12 @@ void main_menu_draw() {
 	VDP_drawText("X", 9, main_menu_top_position + main_menu_selection * 2);
 	if (is_single_pressed(BUTTON_START)) {
 		switch (main_menu_selection) {
-		case 0:
-			change_screen(SCREEN_GAME);
+			case 0:
+				change_screen(SCREEN_GAME);
+			break;
+			case 1:
+				change_screen(SCREEN_CREDITS);
+			break;
 		}
 	}
 }
