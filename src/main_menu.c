@@ -4,8 +4,9 @@ void main_menu_init() {
 	main_menu_top_position = 12;
 	main_menu_selection = 0;
 	main_menu_button_was_pressed = 0;
-	char* main_menu_lines[2] = {
+	char* main_menu_lines[3] = {
 		"Play",
+		"How to play",
 		"Credits"
 	};
 
@@ -41,6 +42,9 @@ void main_menu_draw() {
 				change_screen(SCREEN_GAME);
 			break;
 			case 1:
+				change_screen(SCREEN_HOW_TO);
+			break;
+			case 2:
 				change_screen(SCREEN_CREDITS);
 			break;
 		}

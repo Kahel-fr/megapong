@@ -48,6 +48,9 @@ void draw_screen() {
 		case SCREEN_GAME:
 			game_screen_draw();
 		break;
+		case SCREEN_HOW_TO:
+			how_to_screen_draw();
+		break;
 		case SCREEN_CREDITS:
 			credits_screen_draw();
 		break;
