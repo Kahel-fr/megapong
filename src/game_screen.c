@@ -12,6 +12,16 @@ void game_screen_draw() {
 	if (is_single_pressed(BUTTON_START)) {
 		change_screen(SCREEN_MAIN);
 	}
-	ball_move();
 	paddle_update();
+	game_screen_check_collisions();
+	ball_move();
+}
+
+void game_screen_check_collisions(){
+	if(ball_pos_x < paddle_pos_x + paddle_width && ball_pos_x + ball_width > paddle_pos_x){
+	if(ball_pos_y < paddle_pos_y + paddle_height && ball_pos_y + ball_height >= paddle_pos_y){
+		ball_pos_y = paddle_pos_y - ball_height - 1;
+		ball_vel_y = -ball_vel_y;
+	}
+}
 }
