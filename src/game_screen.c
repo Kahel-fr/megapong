@@ -5,7 +5,7 @@ void game_screen_init() {
 	VDP_setPalette(PAL1, bgtile.palette->data);
 	VDP_fillTileMapRect(PLAN_B,TILE_ATTR_FULL(PAL1,0,FALSE,FALSE,1),0,0,40,30);
 	ball_init();
-	ball_sprite = SPR_addSprite(&imgball,100,100,TILE_ATTR(PAL1,0, FALSE, FALSE));
+	paddle_init();
 }
 
 void game_screen_draw() {
@@ -13,4 +13,5 @@ void game_screen_draw() {
 		change_screen(SCREEN_MAIN);
 	}
 	ball_move();
+	paddle_update();
 }

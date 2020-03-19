@@ -17,7 +17,7 @@ int main()
 		//draw current screen (logo, start screen, settings, game, gameover, credits...)
 
 		//wait for screen refresh
-		//update_inputs();
+		update_inputs();
 		VDP_waitVSync();
 	}
 	return (0);

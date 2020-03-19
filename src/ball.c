@@ -1,6 +1,7 @@
 #include "game.h"
 
 void ball_init(){
+	ball_sprite = SPR_addSprite(&imgball,100,100,TILE_ATTR(PAL1,0, FALSE, FALSE));
     ball_pos_x = 100;
     ball_pos_y = 100;
     ball_vel_x = 1;
