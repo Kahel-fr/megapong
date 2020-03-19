@@ -29,8 +29,7 @@ void change_screen(int screen) {
 }
 
 void init_screen() {
-	VDP_clearPlan(PLAN_B, TRUE);
-	VDP_clearPlan(PLAN_A, TRUE);
+	VDP_resetScreen();
 	switch(current_screen){
 		case SCREEN_MAIN:
 			main_menu_init();

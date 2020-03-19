@@ -2,6 +2,7 @@
 #define __GAME_H__
 #include <genesis.h>
 #include <kdebug.h>
+#include <string.h>
 #include "input.h"
 #include "tile.h"
 #include "sprite.h"
