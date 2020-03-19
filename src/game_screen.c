@@ -34,6 +34,9 @@ void game_screen_check_collisions(){
 			add_score();
 		}
 	}
+	if(ball_pos_y + ball_height > BOTTOM_EDGE){
+		game_over();
+	}
 }
 
 void add_score(){
@@ -60,4 +63,8 @@ void show_message(char* message){
 
 void erase_message(){
 	VDP_clearTextArea(0,10,40,10);
+}
+
+void game_over(){
+	change_screen(SCREEN_MAIN);
 }

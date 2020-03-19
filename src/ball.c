@@ -22,9 +22,6 @@ void ball_move(){
 	if(ball_pos_y < TOP_EDGE){
 		ball_pos_y = TOP_EDGE;
 		ball_vel_y = -ball_vel_y;
-	} else if(ball_pos_y + ball_height > BOTTOM_EDGE){
-		ball_pos_y = BOTTOM_EDGE - ball_height;
-		ball_vel_y = -ball_vel_y;
 	}
 
 	ball_pos_x += ball_vel_x;
